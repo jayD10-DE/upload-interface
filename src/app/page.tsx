@@ -1,6 +1,12 @@
 "use client"
 
 import React from 'react';
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
 import Lottie, { LottieRefCurrentProps } from 'lottie-react';
 import { useRef, useState, RefObject } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
@@ -159,17 +165,19 @@ export default function UploadSource() {
                   item.ref.current?.play();
                 }
               }}
-              className="w-[150px] h-[105px] relative rounded-xl p-5 
-                flex flex-col items-center justify-center cursor-pointer overflow-hidden
-                bg-gradient-to-tr from-[#292929] from-0% to-[#101010] to-100%
-                border border-transparent
-                [background-image:linear-gradient(to_top_right,#292929,#101010),linear-gradient(to_top_right,#202020,#404040)] 
-                [background-origin:border-box] 
-                [background-clip:padding-box,border-box]
-                transition-all duration-300
-                hover:[background-image:linear-gradient(to_top_right,#333232,#101010),linear-gradient(to_top_right,#202020,#404040)]
-                hover:shadow-[inset_3px_-12px_30px_-15px_rgba(176,176,176,0.4)]
-                group" // Added group class here
+              className={cn(
+                "w-[150px] h-[105px] relative rounded-xl p-5",
+                "flex flex-col items-center justify-center cursor-pointer overflow-hidden",
+                "bg-gradient-to-tr from-[#292929] from-0% to-[#101010] to-100%",
+                "border border-transparent",
+                "[background-image:linear-gradient(to_top_right,#292929,#101010),linear-gradient(to_top_right,#202020,#404040)]",
+                "[background-origin:border-box]",
+                "[background-clip:padding-box,border-box]",
+                "transition-all duration-300",
+                "hover:[background-image:linear-gradient(to_top_right,#333232,#101010),linear-gradient(to_top_right,#202020,#404040)]",
+                "hover:shadow-[inset_3px_-12px_30px_-15px_rgba(176,176,176,0.4)]",
+                "group"
+              )}
             >
               <div 
                 className="w-[40px] aspect-square rounded-full grid place-items-center mb-2
