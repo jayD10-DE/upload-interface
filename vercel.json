@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "buildCommand": "next build",
+  "framework": "nextjs",
+  "builds": [
+    {
+      "src": "next.config.js",
+      "use": "@vercel/next"
+    }
+  ],
+  "env": {
+    "NEXT_PUBLIC_API_URL": "https://upload-source.vercel.app/api"
+  }
+}
