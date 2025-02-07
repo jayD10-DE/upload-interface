@@ -10,10 +10,10 @@ export function cn(...inputs: ClassValue[]) {
 import Lottie, { LottieRefCurrentProps } from 'lottie-react';
 import { useRef, useState, RefObject } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
-import editAnimation from '@/app/Assets/edit.json';
-import folderAnimation from '@/app/Assets/folder.json';
-import settingsAnimation from '@/app/Assets/settings.json';
-import linkAnimation from '@/app/Assets/link.json';
+import editAnimation from 'src/app/Assets/edit.json';
+import folderAnimation from 'src/app/Assets/folder.json';
+import settingsAnimation from 'src/app/Assets/settings.json';
+import linkAnimation from 'src/app/Assets/link.json';
 
 const ExtensionIcon = () => (
   <svg 
