@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -98,6 +98,12 @@ export default function UploadSource() {
   const folderRef = useRef<LottieRefCurrentProps>(null);
   const settingsRef = useRef<LottieRefCurrentProps>(null);
   const linkRef = useRef<LottieRefCurrentProps>(null);
+
+  useEffect(() => {
+    // Any document operations should go here
+    // For example:
+    document.title = "Upload Source";
+  }, []);
 
   interface Card {
     icon: React.ElementType | ((props: { lottieRef: RefObject<LottieRefCurrentProps> }) => JSX.Element);
