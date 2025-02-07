@@ -58,7 +58,7 @@ function FolderIcon({ lottieRef }: { lottieRef: RefObject<LottieRefCurrentProps>
 export function SettingsIcon({ lottieRef }: { lottieRef: RefObject<LottieRefCurrentProps> }) {
   return (
     <div className="w-[40px] h-[40px] rounded-full flex items-center justify-center">
-      <div className="-ml-0.6 scale-[0.6]">
+      <div className="-ml-0.6 scale-[0.7]">
         <Lottie 
           lottieRef={lottieRef}
           animationData={settingsAnimation}
